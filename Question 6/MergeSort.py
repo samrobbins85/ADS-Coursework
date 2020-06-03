@@ -11,10 +11,7 @@ def SelectionSort(list):
     return list
 
 def HybridSort(nlist):
-<<<<<<< HEAD
-=======
     # If the length of the list is less than or equal to 4, then sort using selection sort
->>>>>>> master
     if len(nlist)<=4:
         nlist=SelectionSort(nlist)
     # Otherwise sort using merge sort, unless the list is of length 1
@@ -24,17 +21,11 @@ def HybridSort(nlist):
         # Use this to create two lists
         lefthalf = nlist[:mid]
         righthalf = nlist[mid:]
-<<<<<<< HEAD
 
         HybridSort(lefthalf)
         HybridSort(righthalf)
 
-=======
-        # Recursively sort each half
-        MergeSort(lefthalf)
-        MergeSort(righthalf)
         # Merging
->>>>>>> master
         i=j=k=0
         # While the lists are not exhausted
         while i < len(lefthalf) and j < len(righthalf):
@@ -61,14 +52,7 @@ def HybridSort(nlist):
             nlist[k]=righthalf[j]
             j=j+1
             k=k+1
-<<<<<<< HEAD
 
-
-nlist = [7,3,5,9,1]
-HybridSort(nlist)
-=======
-
->>>>>>> master
 
 
 

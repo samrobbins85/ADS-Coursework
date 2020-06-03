@@ -1,0 +1,86 @@
+\documentclass[addpoints]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{pxfonts}
+\usepackage{xcolor}
+
+
+\pagestyle{headandfoot}
+\firstpageheadrule
+\runningheadrule
+\firstpageheader{Coursework}{}{Sam Robbins}
+\runningheader{Coursework}{Algorithms and Data Structures}{Sam Robbins}
+\firstpagefooter{}{}{}
+\runningfooter{}{}{}
+\renewcommand{\solutiontitle}{\noindent\textbf{My Solution:}\par\noindent}
+
+
+\printanswers
+\usepackage{graphicx}
+\marksnotpoints
+\bracketedpoints
+\pointsdroppedatright
+\pointsinrightmargin
+\begin{document}
+	\begin{center}
+		\underline{\LARGE Algorithms and Data Structures Coursework}
+	\end{center}
+	\begin{questions}
+		\setcounter{question}{4}
+		\question For each of the following recurrences, give an expression for the runtime $T(n)$ if the recurrence can be solved with the Master Theorem. Otherwise, state why the Master theorem cannot be applied. You should justify your answers.
+		\begin{parts}
+			\part[3] $T(n)=9T(n/3)+n^2$
+			\begin{solution}[2in]
+	$$T(n)=9T\bigg(\dfrac{n}{3}\bigg)+n^2$$
+$a=9, b=3, f(n)=n^2, \log_ba=2$
+$$f(n)=\Theta(n^2)$$
+$$T(n)=\Theta(n^2\log n)$$
+			\end{solution}	
+		
+		
+			\part[3] $T(n)=4T(n/2)+100n$
+			\begin{solution}[2in]
+	$$T(n)=4T\bigg(\dfrac{n}{2}\bigg)+100n$$
+$a=4,b=2,f(n)=100n, \log_ba=2$
+$$f(n)=\mathcal{O}(n^{2-1})$$
+$$T(n)=\Theta(n^2)$$
+			\end{solution}
+		
+
+			\part[3] $T(n)=2^nT(n/2)+n^3$
+\begin{solution}[2in]
+As a is not a number this cannot be solved using master theorem
+\end{solution}
+
+
+			\part[3] $T(n)=3T(n/3)+c\cdot n$
+\begin{solution}[2in]
+	Under the assumption that c is a constant, otherwise this cannot be solved using master theorem
+$$T(n)=3T\bigg(\dfrac{n}{3}\bigg)+c\cdot n$$
+$a=3,b=3,f(n)=c\cdot n,\log_ba=1$	
+$$f(n)=\Theta(n^1)$$
+$$T(n)=\Theta(n\log n)$$
+\end{solution}
+
+
+			\part[3] $T(n)=0.99T(n/7)+1/(n^2)$
+\begin{solution}[2in]
+	$$T(n)=0.99T\bigg(\dfrac{n}{7}\bigg)+\dfrac{1}{n^2}$$
+$a<1$ so Master theorem cannot be performed.
+\end{solution}
+
+		\end{parts}	
+
+
+	\end{questions}
+	
+	
+	
+	
+	
+\end{document}
+
+
+
+
