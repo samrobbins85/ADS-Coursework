@@ -9,4 +9,11 @@ Let k be 2,3 or 4. The k-child of a positive integer is defined to be a number o
 
 A positive integer is k-ephemeral if its k-descendant sequence ends in 1, and otherwise it is k-eternal.
 
-Write a function called `count_ephemeral(n1,n2,k)` which, given two positive integers n<sub>1</sub> and n<sub>2</sub>, n<sub>1</sub>< n<sub>2</sub>, and k in {2,3,4} returns the number of k-ephemeral numbers i.
+Write a function called `count_ephemeral(n1,n2,k)` which, given two positive integers n<sub>1</sub> and n<sub>2</sub>, n<sub>1</sub>< n<sub>2</sub>, and k∈{2,3,4} returns the number of k-ephemeral numbers i.
+
+## Question 3
+A sum and product expression is a statement containing positive integers, brackets and the plus and times operators. A sum and product expression is said to be good if none of the pairs of brackets it contains are redundant. Brackets are redundant if their removal does not affect the calculation that is done.
+
+Write an algorithm that decides whether a sum and product expression is good. Ideally the input should be read just one, from left to right. You can assume
+* The input is a correct expression except that it might have redundant brackets i.e. all brackets in the expression are part of a matching pair
+* All operators are explicit
